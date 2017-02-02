@@ -24,9 +24,11 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <spring-boot.version>1.4.4.RELEASE</spring-boot.version>
     <mysql-connector.version>5.1.40</mysql-connector.version>
-    <mybatis.version>3.3.1</mybatis.version>
+    <mybatis.version>3.4.2</mybatis.version>
      <mybatis.spring.version>1.3.1</mybatis.spring.version>
+     <spring-data-redis.version>1.7.7.RELEASE</spring-data-redis.version>
      <spring-session-data-redis.version>1.3.0.RELEASE</spring-session-data-redis.version>
+     <spring.version>4.3.6.RELEASE</spring.version>
   </properties>
   
   <dependencyManagement>
@@ -45,6 +47,31 @@
          <type>pom</type>
          <scope>import</scope>
      </dependency>
+     	<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-core</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot</artifactId>
+		    <version>${spring-boot.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-autoconfigure</artifactId>
+		    <version>${spring-boot.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter</artifactId>
+		    <version>${spring-boot.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-tomcat</artifactId>
+		    <version>${spring-boot.version}</version>
+		</dependency>
 		<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -105,6 +132,11 @@
         </dependency>
         
         <!-- redis session manager -->
+        <dependency>
+		    <groupId>org.springframework.data</groupId>
+		    <artifactId>spring-data-redis</artifactId>
+		    <version>${spring-data-redis.version}</version>
+		</dependency>
 	    <dependency>
 		    <groupId>org.springframework.session</groupId>
 		    <artifactId>spring-session-data-redis</artifactId>
