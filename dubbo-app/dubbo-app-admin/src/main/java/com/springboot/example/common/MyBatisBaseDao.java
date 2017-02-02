@@ -22,7 +22,7 @@ public abstract class MyBatisBaseDao<T> {
 			DynamicMethod.invokeMethod(obj, "setId", new Object[]{UUIDGenerator.getUUID()});
 		}
 		DynamicMethod.invokeMethod(obj, "setCreateTime", new Object[]{new Date()});
-		DynamicMethod.invokeMethod(obj, "setStat", new Object[]{new Integer(1)});
+		DynamicMethod.invokeMethod(obj, "setStat", new Object[]{new Byte((byte)1)});
 		return (Integer)DynamicMethod.invokeMethod(getMapper(), "insert", new Object[]{obj});
 	}
 	
@@ -37,7 +37,7 @@ public abstract class MyBatisBaseDao<T> {
 			DynamicMethod.invokeMethod(obj, "setId", new Object[]{UUIDGenerator.getUUID()});
 		}
 		DynamicMethod.invokeMethod(obj, "setCreateTime", new Object[]{new Date()});
-		DynamicMethod.invokeMethod(obj, "setStat", new Object[]{new Integer(1)});
+		DynamicMethod.invokeMethod(obj, "setStat", new Object[]{new Byte((byte)1)});
 		return (Integer)DynamicMethod.invokeMethod(getMapper(), "insertSelective", new Object[]{obj});
 	}
 	
