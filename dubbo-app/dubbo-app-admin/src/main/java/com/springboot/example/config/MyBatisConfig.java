@@ -48,7 +48,6 @@ import javax.sql.DataSource;
  * @since 2015-12-19 10:11
  */
 @Configuration
-@EnableTransactionManagement
 public class MyBatisConfig implements TransactionManagementConfigurer {
 
     @Autowired
